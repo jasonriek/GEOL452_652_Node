@@ -1,0 +1,33 @@
+<%- include('partial/_header') -%>
+<section class="main">
+    <div class="container">
+		<div class="center-container">		
+			<h1 style="margin: 0;"><%- title %></h1>
+		</div>
+		<hr />
+		<div class="center-container">
+            <div class="note-area">
+                <% if(subject === 'gravity') { %>
+                    <%- include('partial/_gravity_outline') -%>
+                <% } %>
+                <div class="split-side-left">
+                    <%- content %>
+                    <p class="do-not-print">
+                        <% if(parseInt(id) > 1) { %>
+                            <a href="/notes/<%- subject %>/<%- parseInt(id) - 1 %>" class="noteButton noteButtonBack" style="color: #000000; float: left">❮❮ Previous</a>
+                        <% } %>
+                        <% if(parseInt(id) < parseInt(page_count)) { %>
+                            <a href="/notes/<%- subject %>/<%- parseInt(id) + 1 %>" class="noteButton noteButtonFor" style="color: ivory; float: right;"> Next ❯❯</a>
+                        <% } %>
+                    </p>
+                </div>	
+            </div>
+		</div>
+    </div>
+
+</section>
+
+
+<script src="/js/notes_accord.js"></script>
+<%- include('partial/_footer') -%>
+

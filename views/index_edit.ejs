@@ -1,0 +1,21 @@
+<%- include('partial/_header') -%>
+	<section class="main">
+		<div class="container">
+            <form action="/admin/<%- crud_type %>" method="post">
+                <div class="center-container">		
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" required value="<%- title %>">
+                </div>
+                <hr />
+                <div class="center-container">
+                    <div class="split-side-left">
+                        
+                        <textarea name="content" id="content" required><%- content %></textarea>
+
+                    </div>		
+                </div>
+            </form>
+		</div>
+	</section>
+<%- include('partial/_footer') -%>
+

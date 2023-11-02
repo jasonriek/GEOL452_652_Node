@@ -1,0 +1,24 @@
+<%- include('partial/_header') -%>
+	<section class="main">
+		<div class="container">
+            <form action="/admin/create" method="post">
+                  <br>
+                  <label for="reference">URL Reference:</label><br>
+                  <input type="text" name="reference" id="reference" style="width: 100%;" required>
+                  <br><br>
+                    <label for="title">Title:</label><br>
+                    <input type="text" name="title" id="title" style="width: 100%;" required>
+              
+                <hr />
+
+                        <label for="content">Content:</label><br>
+                        <textarea name="content" id="content" style="width: 100%; max-width: 100%; height: 300px; resize: none;" required></textarea>
+                              <br>
+                        <button type="submit" style="float: right;">Submit</button>
+                        <button onclick="document.location.href='/'" style="float: left;">Cancel</button>
+
+            </form>
+		</div>
+	</section>
+<%- include('partial/_footer') -%>
+
